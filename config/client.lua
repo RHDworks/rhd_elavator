@@ -1,3 +1,16 @@
+---@class TargetData
+---@field coords vector3
+---@field radius number
+
+---@class FloorData
+---@field coords vector4
+---@field label? string
+---@field groups? string|string[]|table<string, number>
+
+---@class ElevatorData
+---@field target TargetData[]
+---@field floor FloorData[]
+
 return {
     Mechanic = {
         target = {

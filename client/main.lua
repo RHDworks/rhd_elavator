@@ -1,8 +1,10 @@
 local elevatorId
 
 local ui = require 'modules.ui'
-local config = require 'config.client'
+local config = require 'config.client' ---@type table<string, ElevatorData>
 
+---@param groups string|string[]|table<string, number>
+---@return boolean
 local function filterGroups(groups)
     local qbPlayerData = exports.qbx_core:GetPlayerData()
 
@@ -29,7 +31,8 @@ local function filterGroups(groups)
     return false
 end
 
-local function prepareElevator(liftData)
+---@param elevatorData ElevatorData
+local function prepareElevator(elevatorData)
     local data = {
         id = elevatorId,
         floor = {}
@@ -37,8 +40,8 @@ local function prepareElevator(liftData)
 
     local myCoords = GetEntityCoords(cache.ped)
 
-    for i=1, #liftData.floor do
-        local floor = liftData.floor[i]
+    for i=1, #elevatorData.floor do
+        local floor = elevatorData.floor[i]
         local currentFloor = false
         local isAuthorize = filterGroups(floor.groups)
 
@@ -63,6 +66,7 @@ local function prepareElevator(liftData)
     }, true)
 end
 
+---@param index number
 local function executeElevator(index)
     if not elevatorId then
         return
