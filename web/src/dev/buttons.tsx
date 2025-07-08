@@ -2,7 +2,7 @@
 import React, {useState} from "react";
 import { Button, SimpleGrid } from "@mantine/core";
 import { debugData } from "../utils/debugData";
-import defaultData from './data/lift.json'
+import defaultData from './data/elevator.json'
 
 const DebugButton: React.FC = () => {
     const [visible, setVisible] = useState(false);
@@ -20,7 +20,7 @@ const DebugButton: React.FC = () => {
                             action: 'setVisible',
                             data: {
                                 visible: visibility,
-                                liftData: defaultData
+                                elevatorData: defaultData
                             }
                         }
                     ])

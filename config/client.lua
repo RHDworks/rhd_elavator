@@ -12,6 +12,7 @@ return {
         },
         floor = {
             {
+                label = 'G',
                 coords = vec(-478.7486, -733.0693, 30.5630, 183.3698),
                 groups = 'mechanic'
             },

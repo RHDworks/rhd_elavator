@@ -59,7 +59,7 @@ local function prepareElevator(liftData)
 
     ui.sendMessage('setVisible', {
         visible = true,
-        liftData = data
+        elevatorData = data
     }, true)
 end
 

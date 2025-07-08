@@ -3,7 +3,7 @@
     "floor": [
         {
             "index": 1,
-            "label": "Lantai 1",
+            "label": "Ground",
             "disable": false
         },
         {
