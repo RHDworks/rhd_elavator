@@ -1,0 +1,34 @@
+{
+    "id": "mechanic",
+    "floor": [
+        {
+            "index": 1,
+            "label": "Lantai 1",
+            "disable": false
+        },
+        {
+            "index": 2,
+            "disable": true
+        },
+        {
+            "index": 3,
+            "disable": false
+        },
+        {
+            "index": 4,
+            "disable": false
+        },
+        {
+            "index": 5,
+            "disable": false
+        },
+        {
+            "index": 6,
+            "disable": false
+        },
+        {
+            "index": 7,
+            "disable": false
+        }
+    ]
+}
